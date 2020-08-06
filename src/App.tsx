@@ -1,21 +1,11 @@
 import React from 'react';
-import {Button} from 'antd';
-import {setRetryTip} from './redux/saga/actions/common'
-import {useDispatch,useSelector} from 'react-redux'
+import Login from './pages/login';
 
 function App() {
 
-  const dispatch = useDispatch()
-  const { retryTip }  = useSelector((state:IState)=>state.common)
-  const handleTestReduxClick = ()=>{
-    dispatch({
-      type:'TRIGGER',
-      payload:[]
-    })
-  }
   return (
     <div className="App">
-      <Button type="primary" onClick = {handleTestReduxClick}>测试</Button>
+      <Login />
     </div>
   );
 }
