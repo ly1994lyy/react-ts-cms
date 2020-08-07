@@ -33,6 +33,7 @@ class Http {
                 }
                 if(res.data.errorCode!==0){
                     message.error(res.data.errMsg || '服务器异常！')
+                    return Promise.reject(res.data.errMsg)
                 }
                 return Promise.resolve(res.data)
             },

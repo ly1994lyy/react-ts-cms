@@ -12,4 +12,4 @@ export const loginAction = extendRoutine(
     ]
 )
 
-const loginActionPromise = promisifyRoutine(loginAction)
+export const loginActionPromise = promisifyRoutine(loginAction)
